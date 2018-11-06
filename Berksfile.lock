@@ -1,0 +1,18 @@
+DEPENDENCIES
+  datadog (~> 2.16.1)
+  jarvis
+    path: .
+    metadata: true
+
+GRAPH
+  apt (7.1.1)
+  chef_handler (3.0.3)
+  datadog (2.16.1)
+    apt (>= 0.0.0)
+    chef_handler (>= 1.1)
+    windows (>= 0.0.0)
+    yum (>= 3.0)
+  jarvis (1.0.0)
+    datadog (>= 0.0.0)
+  windows (5.1.4)
+  yum (5.1.0)
