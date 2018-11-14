@@ -1,5 +1,12 @@
 include_recipe 'datadog::dd-agent'
 
+group 'systemd-journal' do
+  members 'dd-agent'
+  append true
+  action :create
+  notifies :restart, 'service[datadog-agent]'
+end
+
 service 'datadog-agent' do
   action :nothing
 end
