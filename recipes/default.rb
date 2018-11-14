@@ -7,6 +7,15 @@ group 'systemd-journal' do
   notifies :restart, 'service[datadog-agent]'
 end
 
+if node.role?('controller') || node.role?('worker')
+  group 'docker' do
+    members 'dd-agent'
+    append true
+    action :create
+    notifies :restart, 'service[datadog-agent]'
+  end
+end
+
 service 'datadog-agent' do
   action :nothing
 end
