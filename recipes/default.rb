@@ -22,8 +22,16 @@ end
 
 directory '/etc/datadog-agent/conf.d/journald.d'
 
-file '/etc/datadog-agent/conf.d/journald.d/conf.yaml' do
-  action :create
-  content "logs:\n  - type: journald\n"
+template '/etc/datadog-agent/conf.d/journald.d/conf.yaml' do
+  source 'journal.yaml.erb'
+  notifies :restart, 'service[datadog-agent]'
+end
+
+file '/etc/datadog-agent/conf.d/disk.d/conf.yaml.default' do
+  action :delete
+end
+
+template '/etc/datadog-agent/conf.d/disk.d/conf.yaml' do
+  source 'disk.yaml.erb'
   notifies :restart, 'service[datadog-agent]'
 end
