@@ -1,3 +1,4 @@
+include_recipe 'datadog::dd-handler'
 include_recipe 'datadog::dd-agent'
 
 group 'systemd-journal' do
