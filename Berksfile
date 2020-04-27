@@ -3,4 +3,4 @@ source chef_repo: '..'
 
 metadata
 
-cookbook 'datadog', '~> 3.2.0'
+cookbook 'datadog', '= 3.5.1'
