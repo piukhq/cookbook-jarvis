@@ -1,16 +1,7 @@
 DEPENDENCIES
-  datadog (= 3.5.1)
   jarvis
     path: .
     metadata: true
 
 GRAPH
-  apt (7.2.0)
-  chef_handler (3.0.3)
-  datadog (3.5.1)
-    apt (>= 0.0.0)
-    chef_handler (>= 1.2)
-    yum (>= 3.0)
-  jarvis (1.0.11)
-    datadog (>= 0.0.0)
-  yum (5.1.0)
+  jarvis (1.1.0)
