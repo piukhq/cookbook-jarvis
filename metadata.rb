@@ -1,3 +1,3 @@
 name 'jarvis'
-description 'Build and Deploy Datadog Agent'
-version '1.1'
+description 'Deploy Node Exporter for Prometheus'
+version '2.0.0'

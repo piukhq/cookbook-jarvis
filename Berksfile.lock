@@ -4,4 +4,4 @@ DEPENDENCIES
     metadata: true
 
 GRAPH
-  jarvis (1.1.0)
+  jarvis (2.0.0)

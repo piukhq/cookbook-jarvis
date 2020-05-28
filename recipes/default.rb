@@ -1,7 +1,5 @@
-service 'datadog-agent' do
-  action [:stop, :disable]
-end
+package 'prometheus-node-exporter'
 
-package 'datadog-agent' do
-  action :remove
+service 'prometheus-node-exporter' do
+  action [:enable, :start]
 end
